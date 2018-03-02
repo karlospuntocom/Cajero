@@ -190,11 +190,26 @@ form{
   h1 {
     width: 90%;
     padding: 0;
+    margin-left: auto;
+    margin-right: auto; 
   }
   .container {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
     height: auto;
+  }
+
+  .opcion-home{
+    width: 20%;
+    height: 30%;
+    font-size: 25px; 
+  }
+
+  .img-link{
+    margin-top: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 75px;
   }
 }
