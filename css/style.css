@@ -5,7 +5,7 @@
 }
 
 a, input{
-	background-color: #f83507;
+	background-color: #f8350780;
   padding: 14px 25px;
   text-align: center; 
   text-decoration: none;
@@ -20,18 +20,19 @@ a, input{
 }
 
 a:hover, input:hover{
-	background-color: #a94442;
+	background-color: #f83507de;
 }
 
 h1{
 	text-align: center;
 	padding-top: 30px;
-  color: #0178ff;
+  color: #0261ce;
 }
 
 h2{
   margin-left: 5%;
   color: black;
+  text-align: center;
 }
 
 body{
@@ -65,13 +66,14 @@ th, td{
 
 form{
 	text-align: center;
-  color: #0178ff;
+  color: black;
   font-weight: bold;
+  font-size: 20px;
 }
 
 .inputback{
   display: block;
-  background-color: #f83507;
+  background-color: #f8350780;
   padding: 14px 25px;
   text-align: center; 
   text-decoration: none;
@@ -84,7 +86,7 @@ form{
 
 .input-cerrar{
   display: block;
-  background-color: #f83507;
+  background-color: #f8350780;
   padding: 14px 25px;
   text-align: center; 
   text-decoration: none;

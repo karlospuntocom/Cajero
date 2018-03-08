@@ -14,11 +14,13 @@
 	</head>
 	<?php
 		session_start();
-		if($_SESSION['user']){
+		if($_SESSION['user'] and $_SESSION['saldo']){
 		}
 		else{
-		  header("location:index.php");
+		  header("location:login.php");
 		}
+		$saldo = $_SESSION['saldo'];
+		$user = $_SESSION['user'];
 	?>
 	<body class="body-home">
 		<div class="container">
@@ -28,15 +30,12 @@
 			<h1>
 				Consulta de saldo
 			</h1>
-			
-			<form action="checksaldo.php" method="POST">
-				Ingresar número de cuenta: <input type="text" name="account" required="required"/> <br/>
-				Ingresar contraseña: <input type="password" name="password" required="required"/> <br/>
-				<input type="submit" value="Consultar"/>
-				<a href="volver.php">
-					Volver
-				</a>
-			</form>
+			<h2 style="margin-left: 0px; font-size: 50px;">
+				Su saldo es: $
+				<?php
+					Print number_format("$saldo");
+				?>
+			</h2>
 			<img class="img-back" src="images/logo.png">
 		</div>		
 	</body>

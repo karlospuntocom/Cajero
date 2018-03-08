@@ -26,13 +26,14 @@
 				Cerrar sesión
 			</a>
 			<h1>
-				Consulta de saldo
+				Consignación de dinero
 			</h1>
 			
-			<form action="checksaldo.php" method="POST">
+			<form action="checkconsignar.php" method="POST">
 				Ingresar número de cuenta: <input type="text" name="account" required="required"/> <br/>
-				Ingresar contraseña: <input type="password" name="password" required="required"/> <br/>
-				<input type="submit" value="Consultar"/>
+				Confirmar número de cuenta: <input type="text" name="account2" required="required"/> <br/>
+				Ingresar cantidad de dinero a consignar: <input type="text" name="money" required="required"/> <br/>
+				<input type="submit" value="Consignar"/>
 				<a href="volver.php">
 					Volver
 				</a>

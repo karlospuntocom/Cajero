@@ -26,13 +26,14 @@
 				Cerrar sesión
 			</a>
 			<h1>
-				Consulta de saldo
+				Retiro de dinero
 			</h1>
 			
-			<form action="checksaldo.php" method="POST">
-				Ingresar número de cuenta: <input type="text" name="account" required="required"/> <br/>
-				Ingresar contraseña: <input type="password" name="password" required="required"/> <br/>
-				<input type="submit" value="Consultar"/>
+			<form action="checkretirar.php" method="POST">
+				Ingresar cantidad de dinero a retirar: <input type="text" name="money" required="required"/> <br/>				
+				Ingresar contraseña: <input type="password" name="password" required="required"/> <br/>				
+				Verificar contraseña: <input type="password" name="password2" required="required"/> <br/>				
+				<input type="submit" value="Retirar"/>
 				<a href="volver.php">
 					Volver
 				</a>

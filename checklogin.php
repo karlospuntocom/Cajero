@@ -4,7 +4,7 @@
 	$username = mysqli_real_escape_string($link, $_POST['username']);
 	$password = mysqli_real_escape_string($link, $_POST['password']);
 	
-	$query = mysqli_query($link, "SELECT * from users WHERE username='$username'"); 
+	$query = mysqli_query($link, "SELECT * from cuenta WHERE ID_cliente='$username'"); 
 	$exists = mysqli_num_rows($query); 
 	$table_users = "";
 	$table_password = "";
@@ -12,8 +12,8 @@
 	{
 		while($row = mysqli_fetch_assoc($query)) 
 		{
-			$table_users = $row['username']; 
-			$table_password = $row['password']; 
+			$table_users = $row['ID_cliente']; 
+			$table_password = $row['contrasena']; 
 		}
 		if(($username == $table_users) && ($password == $table_password)) 
 		{
@@ -21,8 +21,7 @@
 				{
 					$_SESSION['user'] = $username; 
 					header("location: index.php"); 
-				}
-				
+				}				
 		}
 		else
 		{
