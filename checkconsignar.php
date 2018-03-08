@@ -8,6 +8,7 @@
 	$query = mysqli_query($link, "UPDATE cuenta SET Saldo = (Saldo+'$money') WHERE ID_cuenta = '$account' AND ID_cuenta = '$account2'");
 	if($query) 
 	{
+		$query2 = mysqli_query($link, "INSERT INTO log_cajero (ID_acceso, Fecha_hora, ID_transaccion, ID_cuenta, ID_cajero, monto) VALUES (NULL, localtime(), '4', '$account', '1', '$money')");
 		Print '<script>alert("Consignación exitosa!");</script>';
 		Print '<script>window.location.assign("index.php");</script>';
 	}

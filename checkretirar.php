@@ -11,6 +11,8 @@
 	$exists = mysqli_num_rows($query); 
 	$table_users = "";
 	$table_password = "";
+	$ID_cuenta = "";
+
 	if($exists > 0) 
 	{
 		while($row = mysqli_fetch_array($query)) 
@@ -18,6 +20,7 @@
 			$table_users = $row['ID_cliente']; 
 			$table_password = $row['contrasena'];
 			$saldo = $row['Saldo'];
+			$ID_cuenta = $row['ID_cuenta'];
 		}
 		if(($username == $table_users) && ($password == $table_password)) 
 		{
@@ -26,6 +29,7 @@
 					$query2 = mysqli_query($link, "UPDATE cuenta SET Saldo = (Saldo-'$money') WHERE contrasena='$password2' AND contrasena='$password' AND ID_cliente='$username'");
 					if($query2) 
 					{
+						$query3 = mysqli_query($link, "INSERT INTO log_cajero (ID_acceso, Fecha_hora, ID_transaccion, ID_cuenta, ID_cajero, monto) VALUES (NULL, localtime(), '3', '$ID_cuenta', '1', '$money')");
 						Print '<script>alert("Retiro exitoso!");</script>';
 						Print '<script>window.location.assign("index.php");</script>';
 					}
